@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="fonts/fontawesome/css/all.css"/>
+    <!-- css -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="lib/bootstrap-4.5.0-dist/css/bootstrap.min.css"/>
+    <!-- aos-animationonscroll -->
+    <link rel="stylesheet" href="lib/aos/aos.css">
+
+    <title>Michele Provolo - web dev</title>
+  </head>
+  
+  <body>
+    <div class="global">
+      <!-- navbar -->
+      <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark px-5 py-3">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="">
+          <a href="#">Michele Provolo</a>
+        </div>
+        <div class="collapse navbar-collapse d-lg-flex justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item mr-4">
+              <a class="nav-link" href="#profile-link">Chi sono</a>
+            </li>
+            <li class="nav-item mr-4">
+              <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact-me">Contattami</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- profile -->
+      <div class="container pt-5" id="profile-link">
+        <div class="row profile">
+          <div class="col-sm-12 col-lg-6">
+            <h2>
+              Michele Provolo <br />
+              Jr. Web Developer
+            </h2>
+            <div class="pt-4">
+              <p>Chi sono?
+                Laureato in Giurisprudenza, ma da sempre appassionato di comunicazione e Web.
+              </p>
+              <p>
+                In pochi anni di esperienza professionale nel digital marketing ho imparato e fatto moltissimo.
+              </p>
+              <p>Ma ho capito che la parte migliore doveva ancora arrivare...
+              </p>
+              <p>Ecco perché ho iniziato a scrivere 
+                <a class="yellow" target="_blank" href="https://github.com/micheleprovolo">codice</a>: un amore a prima vista. </p>
+            </div>
+            <a href="#contact-me" class="btn btn-outline-warning btn-lg mt-5">Contattami</a>
+          </div>
+          <div class="col-sm-12 col-lg-6 pic mt-sm-5 mt-lg-0">
+            <img src="img/foto_profilo_sito.png" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- portfolio -->
+      <div class="container portfolio mt-5 " id="portfolio">
+        <div class="">
+          <h1>Portfolio</h1>
+          <p>Dai un'occhiata ad alcuni dei miei lavori:</p>
+        </div>
+        <div class="row">
+          <div class="project-image mt-4 col-sm-12 col-lg-6">
+            <div class="active" data-project-type="boolflix">
+              <a target="_blank" href="https://github.com/micheleprovolo/ajax-ex-boolflix">
+                <img src="gif/boolflix.gif" alt="">
+              </a>
+            </div>
+            <div class="" data-project-type="boolzapp">
+              <a target="_blank" href="https://github.com/micheleprovolo/js-html-css-boolzap">
+                <img src="gif/whatsapp_web.gif" alt="">
+              </a>
+            </div>
+            <div class="" data-project-type="spotifyweb">
+              <a target="_blank" href="https://github.com/micheleprovolo/html-css-spotifyweb">
+                <img src="gif/spotify_web.gif" alt="">
+              </a>
+            </div>
+          </div>
+
+          <div data-aos="fade-left" class="col-sm-12 col-lg-6 mt-4 portfolio-description">
+            <ul class="pt-2 project-list">
+              <li class="active " data-project-type="boolflix">
+                <div class="link-icon-wrapper d-flex">
+                  <i class="mr-2 fas fa-arrow-right"></i>
+                  <a class="mr-3" href="">boolflix</a>
+                  <i class="mr-2 fab fa-html5"></i>
+                  <i class="mr-2 fab fa-css3-alt"></i>
+                  <i class="mr-2 fab fa-js-square"></i>
+                </div>
+              </li>
+              <li data-project-type="boolzapp">
+                <div class="pt-3 link-icon-wrapper d-flex">
+                  <i class="mr-2 fas fa-arrow-right"></i>
+                  <a class="mr-3" href="">boolzapp</a>
+                  <i class="mr-2 fab fa-html5"></i>
+                  <i class="mr-2 fab fa-css3-alt"></i>
+                  <i class="mr-2 fab fa-js-square"></i>
+                </div> 
+              </li>
+              <li data-project-type="spotifyweb">
+                <div class="pt-3 link-icon-wrapper d-flex">
+                  <i class="mr-2 fas fa-arrow-right"></i>
+                  <a class="mr-3" href="">spotify web</a>
+                  <i class="mr-2 fab fa-html5"></i>
+                  <i class="mr-2 fab fa-css3-alt"></i>
+                </div> 
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- chartjs container -->
+      <div class="container skills">
+        <div class="row">
+          <div class="col-12 mt-5">
+            <h1>Skills</h1>
+            <p>Le tecnologie che ho utilizzato prevalentemente sinora sono:</p>
+            <canvas class="mt-4" id="myChart" ></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- contact me -->
+      <div class="container contact" id="contact-me">
+        <div class="row">
+          <div class="col-12 mt-5">
+            <h1>Contattami</h1>
+            <!-- form -->
+            <form id="contact-form" action="contactform.php" method="POST">
+              <div class="form-group">
+                <label for="email">Indirizzo mail:</label>
+                <input name='email' type="text" class="form-control" id="form-email" />
+              </div>
+              <div class="form-group">
+                <label for="name">Nome:</label>
+                <input name='name' type="text" class="form-control" id="form-name" />
+              </div>
+              <div class="form-group">
+                <label for="surname">Cognome:</label>
+                <input name='surname' type="text" class="form-control" id="form-surname" />
+              </div>
+              <div class="form-group">
+                <label for="message">Scrivi qui la tua richiesta:</label>
+                <textarea id="form-message" class="form-control" name="message" rows="4"></textarea>
+              </div>
+              <div class="d-flex justify-content-center">
+                <button id="form-submit" name="submit" type="submit" class="btn btn-outline-warning btn-lg">
+                  Invia
+                </button>
+              </div>
+
+              <p class="form-alert"></p>
+
+            </form>
+            <!-- end form -->
+          </div>
+        </div>
+      </div>
+
+      <!-- back-to-the-top button -->
+      <a href="" id="back-to-top" class=""><i class="fas fa-arrow-up"></i></a>
+
+      <!-- footer -->
+      <footer class="mt-5 pt-5 pb-3">
+        <div class="d-flex justify-content-center">
+          <!-- <a
+            href="mailto:michele.provolo@gmail.com?subject=Richiesta info"
+            target="_blank"
+            ><i class="far fa-envelope"></i
+          ></a> -->
+          <a href="https://www.linkedin.com/in/micheleprovolo/" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/micheleprovolo" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+        <div class="copyright d-flex justify-content-center mt-5 mr-3">
+          <span class=""><i class="far fa-copyright"></i></span>
+          <p id="copyright-full-year"></p>
+        </div>
+      </footer>
+
+      <!-- ends global-container -->
+    </div>
+
+    <!-- jquery -->
+    <script src="lib/jquery-3.4.1.min.js"></script>
+    <!-- scrollmagic -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <!-- javascript -->
+    <script src="main.js"></script>
+    <script src="mychart.js"></script>
+    <!-- bootstrap -->
+    <script src="lib/bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
+    <!-- aos-animationonscroll -->
+    <script src="lib/aos/aos.js"></script>
+    <!-- chartjs cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+
+  </body>
+</html>
